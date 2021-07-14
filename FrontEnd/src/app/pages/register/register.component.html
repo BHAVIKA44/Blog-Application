@@ -1,0 +1,19 @@
+
+<div class="register">
+  <div *ngIf="alert" class="alert alert-danger">  
+    <strong>Please enter details</strong>   
+  </div>
+    <span class="registerTitle">Register</span>
+    <form class="registerForm">
+      <label>Username</label>
+      <input class="registerInput" type="text" placeholder="Enter your username..." name="username" [(ngModel)]="username" required/>
+      <label>Email</label>
+      <input class="registerInput" type="text" placeholder="Enter your email..." name="email" [(ngModel)]="email" required/>
+      <label>Password</label> 
+      <input class="registerInput" type="password" placeholder="Enter your password..."  name="password" [(ngModel)]="password" required/>
+      <button class="registerButton"(click)="doPost()">Register</button>
+    </form>
+    <a routerLink="/login"style="text-decoration: none; color: inherit" >
+       <button class="registerLoginButton" >Login</button></a>
+  </div>
+          
